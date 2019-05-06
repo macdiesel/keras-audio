@@ -1,0 +1,118 @@
+{
+    "graph": {
+        "_type": "graph",
+        "format": "keras",
+        "nodes": [
+            {
+                "name": "sequential_1_input",
+                "id": "sequential_1_input",
+                "class_name": "InputLayer",
+                "output_shape": [
+                    null,
+                    20,
+                    11,
+                    1
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "conv2d_1",
+                "id": "conv2d_1",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    18,
+                    9,
+                    250
+                ],
+                "num_parameters": 2500
+            },
+            {
+                "name": "flatten_1",
+                "id": "flatten_1",
+                "class_name": "Flatten",
+                "output_shape": [
+                    null,
+                    40500
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_1",
+                "id": "dense_1",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    3
+                ],
+                "num_parameters": 121503
+            }
+        ],
+        "edges": [
+            [
+                "sequential_1_input",
+                "conv2d_1"
+            ],
+            [
+                "conv2d_1",
+                "flatten_1"
+            ],
+            [
+                "flatten_1",
+                "dense_1"
+            ]
+        ]
+    },
+    "_step": 49,
+    "val_loss": 3.224720236882998,
+    "epoch": 49,
+    "val_acc": 0.7928709001899454,
+    "loss": 2.7404672693470755,
+    "_timestamp": 1556659359.461164,
+    "_runtime": 19.484546661376953,
+    "acc": 0.8242287927697434,
+    "examples": {
+        "width": 11,
+        "height": 20,
+        "count": 36,
+        "_type": "images",
+        "captions": [
+            "cat",
+            "happy",
+            "happy",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "happy",
+            "cat",
+            "happy",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "cat",
+            "cat",
+            "happy",
+            "cat",
+            "cat",
+            "happy",
+            "bed",
+            "happy",
+            "happy",
+            "happy",
+            "happy",
+            "bed",
+            "happy",
+            "cat",
+            "happy",
+            "bed",
+            "bed",
+            "bed",
+            "happy",
+            "happy"
+        ]
+    }
+}

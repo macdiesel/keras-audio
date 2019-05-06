@@ -1,0 +1,24 @@
+{
+    "root": "/home/macdiesel/keras-audio",
+    "git": {
+        "remote": "https://github.com/lukas/keras-audio",
+        "commit": "dbacc7c3b4adefcb12204ee09a0d6bb682fb5fea"
+    },
+    "email": null,
+    "startedAt": "2019-04-30T20:50:43.825433",
+    "host": "jupyter-macdiesel",
+    "username": "macdiesel",
+    "os": "Linux-4.14.91+-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.6.7",
+    "gpu": "Tesla K80",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "program": "train.py",
+    "cuda": "10.0.130",
+    "args": [],
+    "state": "failed",
+    "heartbeatAt": "2019-04-30T20:51:07.602044",
+    "jobType": null,
+    "mode": "run",
+    "exitcode": 1
+}

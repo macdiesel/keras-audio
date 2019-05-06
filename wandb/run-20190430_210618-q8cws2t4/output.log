@@ -1,0 +1,24 @@
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Traceback (most recent call last):
+  File "train.py", line 51, in <module>
+    model.fit(X_train, y_train_hot, batch_size=config.batch_size, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training.py", line 952, in fit
+    batch_size=batch_size)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training.py", line 677, in _standardize_user_data
+    self._set_inputs(x)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training.py", line 589, in _set_inputs
+    self.build(input_shape=(None,) + inputs.shape[1:])
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/sequential.py", line 221, in build
+    x = layer(x)
+  File "/usr/local/lib/python3.6/dist-packages/keras/layers/recurrent.py", line 532, in __call__
+    return super(RNN, self).__call__(inputs, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/base_layer.py", line 414, in __call__
+    self.assert_input_compatibility(inputs)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/base_layer.py", line 311, in assert_input_compatibility
+    str(K.ndim(x)))
+ValueError: Input 0 is incompatible with layer gru_1: expected ndim=3, found ndim=4

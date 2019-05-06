@@ -1,0 +1,22 @@
+diff --git a/train.py b/train.py
+index 07e2283..7a9f2d9 100644
+--- a/train.py
++++ b/train.py
+@@ -1,7 +1,7 @@
+ from preprocess import *
+ import keras
+ from keras.models import Sequential
+-from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
++from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D, LSTM
+ from keras.utils import to_categorical
+ import wandb
+ from wandb.keras import WandbCallback
+@@ -38,6 +38,8 @@ y_test_hot = to_categorical(y_test)
+ 
+ model = Sequential()
+ model.add(Flatten(input_shape=(config.buckets, config.max_len, channels)))
++model.add(LSTM())
++model.add(LSTM())
+ model.add(Dense(num_classes, activation='softmax'))
+ model.compile(loss="categorical_crossentropy",
+               optimizer="adam",

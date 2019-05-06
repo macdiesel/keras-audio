@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "train.py", line 40, in <module>
+    model.add(LSTM(64, (3,3)))
+  File "/usr/local/lib/python3.6/dist-packages/keras/legacy/interfaces.py", line 46, in wrapper
+    str(list(args[1:])))
+TypeError: `LSTM` can accept only 1 positional arguments ('units',), but you passed the following positional arguments: [64, (3, 3)]

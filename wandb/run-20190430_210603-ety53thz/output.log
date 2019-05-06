@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "train.py", line 42, in <module>
+    model.add(GRU(128, return_sequences=True))
+NameError: name 'GRU' is not defined

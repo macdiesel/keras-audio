@@ -1,0 +1,13 @@
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Traceback (most recent call last):
+  File "train.py", line 49, in <module>
+    model.fit(X_train, y_train_hot, batch_size=config.batch_size, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training.py", line 952, in fit
+    batch_size=batch_size)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training.py", line 751, in _standardize_user_data
+    exception_prefix='input')
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/training_utils.py", line 128, in standardize_input_data
+    'with shape ' + str(data_shape))
+ValueError: Error when checking input: expected lstm_1_input to have 3 dimensions, but got array with shape (3112, 20, 11, 1)

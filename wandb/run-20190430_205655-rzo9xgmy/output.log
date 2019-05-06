@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "train.py", line 40, in <module>
+    model.add(LSTM(config.max_len, input_shape=(config.buckets, config.max_len, channels)))
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/sequential.py", line 165, in add
+    layer(x)
+  File "/usr/local/lib/python3.6/dist-packages/keras/layers/recurrent.py", line 532, in __call__
+    return super(RNN, self).__call__(inputs, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/base_layer.py", line 414, in __call__
+    self.assert_input_compatibility(inputs)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/base_layer.py", line 311, in assert_input_compatibility
+    str(K.ndim(x)))
+ValueError: Input 0 is incompatible with layer lstm_1: expected ndim=3, found ndim=4

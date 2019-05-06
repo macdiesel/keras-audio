@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "train.py", line 41, in <module>
+    model.add(GRU(input_shape=(config.buckets, config.max_len, channels)))
+  File "/usr/local/lib/python3.6/dist-packages/keras/legacy/interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'units'

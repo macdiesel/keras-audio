@@ -1,0 +1,32 @@
+diff --git a/train.py b/train.py
+index 07e2283..fe6313e 100644
+--- a/train.py
++++ b/train.py
+@@ -1,7 +1,7 @@
+ from preprocess import *
+ import keras
+ from keras.models import Sequential
+-from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
++from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D, LSTM, GRU
+ from keras.utils import to_categorical
+ import wandb
+ from wandb.keras import WandbCallback
+@@ -14,7 +14,7 @@ config.buckets = 20
+ 
+ 
+ # Save data to array file first
+-save_data_to_array(max_len=config.max_len, n_mfcc=config.buckets)
++# save_data_to_array(max_len=config.max_len, n_mfcc=config.buckets)
+ 
+ labels = ["bed", "happy", "cat"]
+ 
+@@ -37,6 +37,9 @@ y_train_hot = to_categorical(y_train)
+ y_test_hot = to_categorical(y_test)
+ 
+ model = Sequential()
++# model.add(LSTM(64, return_state=True))
++model.add(Dropout(0.3))
++model.add(GRU(128, return_sequences=True))
+ model.add(Flatten(input_shape=(config.buckets, config.max_len, channels)))
+ model.add(Dense(num_classes, activation='softmax'))
+ model.compile(loss="categorical_crossentropy",

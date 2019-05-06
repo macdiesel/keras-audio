@@ -1,0 +1,7 @@
+(3112, 20, 11, 1)
+Traceback (most recent call last):
+  File "train.py", line 42, in <module>
+    model.add(Conv2D())
+  File "/usr/local/lib/python3.6/dist-packages/keras/legacy/interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+TypeError: __init__() missing 2 required positional arguments: 'filters' and 'kernel_size'
